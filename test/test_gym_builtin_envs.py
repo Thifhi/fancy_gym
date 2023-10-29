@@ -20,8 +20,6 @@ GYM_IDS = [spec.id for spec in gym.envs.registry.values() if
 GYM_MP_IDS = fancy_gym.ALL_DMC_MOVEMENT_PRIMITIVE_ENVIRONMENTS['all']
 SEED = 1
 
-print(GYM_IDS)
-
 @pytest.mark.parametrize('env_id', GYM_IDS)
 def test_step_gym_functionality(env_id: str):
     """Tests that step environments run without errors using random actions."""
